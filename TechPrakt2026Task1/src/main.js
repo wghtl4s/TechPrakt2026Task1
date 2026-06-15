@@ -8,6 +8,13 @@ btn.addEventListener('click', () => {
 
     const li = document.createElement('li');
     li.textContent = text;
+    li.style.cursor = 'pointer';
+
+    li.addEventListener('click', () => {
+        li.style.textDecoration =
+            li.style.textDecoration === 'line-through' ? 'none' : 'line-through';
+    });
+
     list.appendChild(li);
     input.value = '';
 });
